@@ -23,12 +23,14 @@ export default class Model{
     }*/
 
     elemFeltolt(i){
-        let szam = Math.floor((Math.random() * 100)+1);
-        if(szam > 30){
-            this.#LISTA[i] = "Szellem"
-        }else{
-            this.#LISTA[i] = "Ördög"
-        }}
+        if(this.#LISTA[i] === ""){
+            let szam = Math.floor((Math.random() * 100)+1);
+            if(szam > 30){
+                this.#LISTA[i] = "Szellem"
+            }else{
+                this.#LISTA[i] = "Ördög"
+            }}
+        }
     
     adatVisszaAd(index){
         return this.#LISTA[index]
