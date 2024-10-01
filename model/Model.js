@@ -2,7 +2,7 @@ export default class Model{
     #LISTA = ["","","","","","","","","","","","","","","","","","","",""]
 
     constructor(){
-        this.listaFeltolt()
+        this.elemFeltolt()
         this.adatVisszaAd()
     }
 
@@ -10,7 +10,7 @@ export default class Model{
         return this.#LISTA
     }
 
-    listaFeltolt(){
+    /*listaFeltolt(){
         for (let i = 0; i < this.#LISTA.length; i++) {
             let szam = Math.floor((Math.random() * 100)+1);
             if(szam > 30){
@@ -20,8 +20,16 @@ export default class Model{
             }
         }
         console.log(this.#LISTA)
-    }
+    }*/
 
+    elemFeltolt(i){
+        let szam = Math.floor((Math.random() * 100)+1);
+        if(szam > 30){
+            this.#LISTA[i] = "Szellem"
+        }else{
+            this.#LISTA[i] = "Ördög"
+        }}
+    
     adatVisszaAd(index){
         return this.#LISTA[index]
     }

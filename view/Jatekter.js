@@ -17,8 +17,7 @@ export default class Jatekter{
         })
     }
 
-    beleIr(index, karakter){
-        console.log(karakter)
+    beleIr(karakter){
         let eredmenyElem = $('.vegeredmeny')
         eredmenyElem.empty();
         if(karakter === "Ördög"){

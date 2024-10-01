@@ -11,8 +11,11 @@ export default class Control{
 
     #esemenykezelo(){
         $(window).on("kattintas", (event)=>{
+            this.model.elemFeltolt(event.detail)
+            new Jatekter(this.model.getLista(), this.szuloElem)
             let karakter = this.model.adatVisszaAd(event.detail)
-            this.jatekter.beleIr(event.detail, karakter)
+            console.log(karakter)
+            this.jatekter.beleIr(karakter)
         });
     }
 }
