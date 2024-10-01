@@ -7,6 +7,7 @@ export default class Jatekter{
     constructor(lista, szuloElem){
         this.#lista = lista
         this.#szuloElem = szuloElem
+        this.#szuloElem.empty()
         this.jatekTerMegjelenit()
     }
 
@@ -14,6 +15,16 @@ export default class Jatekter{
         this.#lista.forEach((elem, index) => {
             new Kartya(elem, this.#szuloElem, index)
         })
-        console.log('jatekter')
+    }
+
+    beleIr(index, karakter){
+        console.log(karakter)
+        let eredmenyElem = $('.vegeredmeny')
+        eredmenyElem.empty();
+        if(karakter === "Ördög"){
+            eredmenyElem.append('Vesztettél!')
+        }else if(karakter === "Szellem"){
+            eredmenyElem.append('Nyertél!')
+        }   
     }
 }

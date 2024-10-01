@@ -13,8 +13,7 @@ export default class Kartya{
     }
 
     kartyaMegjelenit(){
-        this.#szuloElem.append(`<div class="card col-sm kartya"></div>`)
-        console.log('kartya')
+        this.#szuloElem.append(`<div class="card col-sm kartya">${this.#obj}</div>`)
     }
 
     #esemenyKezelo(){

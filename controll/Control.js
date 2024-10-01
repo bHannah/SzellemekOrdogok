@@ -11,8 +11,8 @@ export default class Control{
 
     #esemenykezelo(){
         $(window).on("kattintas", (event)=>{
-            this.model.karakterRajzol(event.detail.index);
-            new Jatekter(this.model.getLista(), this.szuloElem);
+            let karakter = this.model.adatVisszaAd(event.detail)
+            this.jatekter.beleIr(event.detail, karakter)
         });
     }
 }
